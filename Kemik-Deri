@@ -1,0 +1,25 @@
+
+package kompozisyon_kalitim;
+
+class kemik{
+    public void kirilir(){
+        System.out.println("kemik kırılabilir");
+    }
+}
+class deri extends kemik{// kalıtım
+    public deri(){
+        System.out.println("constructor deri");
+    }
+    public void kaplar(){
+        System.out.println("kemik deri ile kaplıdır");
+    }
+}
+public class uygulamaKemikDeri {// ana class
+    public deri x=new deri();// kompozisyon
+    public static void main(String[] args) {
+         uygulamaKemikDeri ali=new  uygulamaKemikDeri();
+    ali.x.kirilir(); // ERİŞİME DİKKAT .. hem KOMPOZİSYON hem de KALITIM mevcut
+    
+    ali.x.kaplar();
+    }
+}
