@@ -1,0 +1,25 @@
+// super ifadesi classın kalıtım aldığı kendinden bir önceki classı gösterir
+// this ifadesi de o anki classı gösterir
+
+package kompozisyon_kalitim;
+
+class Insan {
+public Insan(int par) {
+System.out.println("Insan Yapilandiricisi " + par);
+}
+}
+class ZekiInsan extends Insan {
+public ZekiInsan(int par) {
+System.out.println("ZekiInsan Yapilandiricisi " + par);
+//super(par+1); // ! hatalı !This gibi ilk olmali 
+}
+}
+class Hacker extends ZekiInsan{
+public Hacker(int par) {
+System.out.println("Hacker Yapilandiricisi " + par);
+//super(par+1); // ! hatalı !This gibi ilk olmali
+}
+public static void main(String args[]) {
+Hacker hck = new Hacker(5);
+}
+}
