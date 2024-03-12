@@ -1,0 +1,24 @@
+
+package kompozisyon_kalitim;
+
+class Motor{
+    public void calisir(){
+        System.out.println("Motor calisir");
+    }
+}
+class ARABA{
+    public Motor dizel=new Motor();  // KOMPOZİSYON
+    public void yurur(){
+       dizel.calisir();// Motor sınıfının elemanı
+        System.out.println("Araba yürür");
+     }
+    
+}
+public class UygulamaArabamotor {// ana class
+    public static void main(String[] args) {
+        ARABA  sahin=new ARABA();
+       sahin.yurur();
+      // sahin.dizel.calisir();// erişim yapılabilir
+      
+    }
+}
