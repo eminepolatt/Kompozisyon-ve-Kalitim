@@ -1,0 +1,19 @@
+
+package kompozisyon_kalitim;
+
+class Bitki{
+    public Bitki(){// constructor: class ile aynı isme sahip metod
+        System.out.println("Bitki constructoru çalışır");
+        su_ister();
+    }
+    private void su_ister(){
+        System.out.println("Bitki su ister");
+    }
+}
+public class UygulamaBitki {// ana class
+    public Bitki papatya=new Bitki(); //constructorlu class.Kompozisyon
+    public static void main(String[] args) {
+        UygulamaBitki akasya= new UygulamaBitki();
+    }
+    
+}
